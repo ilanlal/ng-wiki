@@ -1,0 +1,7 @@
+span.searchmatch {
+    background-color: yellow;
+    font-weight: bolder;
+}
+.spacer {
+    flex: 1 1 auto;
+}

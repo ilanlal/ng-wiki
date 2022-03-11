@@ -1,0 +1,46 @@
+<mat-toolbar>
+    <input title="Search for titlead" matInput [(ngModel)]="slug" />
+    <button mat-button (click)="search()">
+        <span class="material-icons">search</span>
+    </button>
+    <span>Search in wikipedia</span>
+    <span class="spacer"></span>
+    <div [hidden]="listMode">
+    <button mat-button (click)="close()">
+        <span class="material-icons">close</span>
+    </button>
+</div>
+</mat-toolbar>
+<div [hidden]="!listMode">
+    <mat-grid-list cols="3">
+        <mat-grid-tile class="mat-grid-tile" *ngFor="let page of pages">
+            <mat-card class="mat-card">
+                <mat-card-header>
+                    <!-- <div mat-card-avatar class="wiki-header-image"></div> -->
+                    <img mat-card-avatar
+                        [src]="page?.thumbnail?.url || 'https://material.angular.io/assets/img/examples/shiba1.jpg'"
+                        class="wiki-header-image" alt="Photo of a Shiba Inu">
+                    <mat-card-title>{{ page.title }}</mat-card-title>
+                    <mat-card-subtitle>{{ page.key }}</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image [src]="page.thumbnail?.url" alt="Photo of a Shiba Inu"> -->
+
+                <mat-card-content>
+
+                    <div [innerHtml]=" page.excerpt "></div>
+
+                </mat-card-content>
+                <mat-card-actions>
+
+                    <mat-card-actions>
+                        <a mat-button (click)="open(page)">READ</a>
+                        <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                </mat-card-actions>
+
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<wiki-page  [hidden]="listMode"></wiki-page>
