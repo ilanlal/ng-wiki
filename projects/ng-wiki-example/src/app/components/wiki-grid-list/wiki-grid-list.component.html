@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar class="mat-toolbar">
     <input title="Search for titlead" matInput [(ngModel)]="slug" />
     <button mat-button (click)="search()">
         <span class="material-icons">search</span>
@@ -11,9 +11,9 @@
     </button>
 </div>
 </mat-toolbar>
-<div [hidden]="!listMode">
+<div [hidden]="!listMode" class="list-area">
     <mat-grid-list cols="3">
-        <mat-grid-tile class="mat-grid-tile" *ngFor="let page of pages">
+        <mat-grid-tile *ngFor="let page of pages">
             <mat-card class="mat-card">
                 <mat-card-header>
                     <!-- <div mat-card-avatar class="wiki-header-image"></div> -->
