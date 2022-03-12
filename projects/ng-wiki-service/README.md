@@ -4,4 +4,4 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Build
 
-Run `ng ng-wiki-service` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build ng-wiki-service` to build the project. The build artifacts will be stored in the `dist/` directory.
