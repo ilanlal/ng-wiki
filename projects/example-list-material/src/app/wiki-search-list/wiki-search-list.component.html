@@ -1,0 +1,49 @@
+<mat-toolbar class="search-toolbar">
+    <mat-form-field class="mat-form-field" appearance="fill">
+        <mat-label>Language</mat-label>
+        <mat-select [(value)]="selectedLang">
+            <mat-option *ngFor="let lang of langs" [value]="lang">
+                {{lang}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" 
+    appearance="fill">
+        <mat-label>Search in wikipedia</mat-label>
+        <input matInput placeholder="Ex. Pizza" 
+        [(ngModel)]="query">
+      </mat-form-field>
+      <button mat-button (click)="search()">
+        <span class="material-icons">search</span>
+    </button>
+    <span class="spacer"></span>
+    
+</mat-toolbar>
+<div class="list-area">
+    <mat-grid-list rowHeight="20vh" cols="1">
+        <mat-grid-tile class="mat-grid-tile" *ngFor="let page of pages">
+            <mat-card class="mat-card">
+                <mat-card-header>
+                    <!-- <div mat-card-avatar class="wiki-header-image"></div> -->
+                    <img mat-card-avatar
+                        [src]="page?.thumbnail?.url || 'https://material.angular.io/assets/img/examples/shiba1.jpg'"
+                        class="wiki-header-image" alt="Photo of a Shiba Inu">
+                    <mat-card-title>{{ page.title }}</mat-card-title>
+                    <mat-card-subtitle>{{ page.description || page.key }}</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image [src]="page.thumbnail?.url" alt="Photo of a Shiba Inu"> -->
+
+                <mat-card-content class="mat-card-content">
+                    <div [innerHtml]=" page.excerpt "></div>
+                </mat-card-content>
+                <mat-card-actions class="mat-card-actions">
+                    <mat-chip-list>
+                        <mat-chip color="primary" selected>{{ page.id }}</mat-chip>
+                        <mat-chip color="primary" selected>{{ page.key }}</mat-chip>
+                    </mat-chip-list>
+                </mat-card-actions>
+
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

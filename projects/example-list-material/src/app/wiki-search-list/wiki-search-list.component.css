@@ -1,0 +1,24 @@
+
+.mat-card {
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+
+
+.search-toolbar {
+    margin: 10px 0 0 10vw;
+    
+}
+
+.mat-form-field {
+    margin-right:10px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+

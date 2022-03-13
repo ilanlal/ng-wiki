@@ -7,13 +7,10 @@ import { WikiPage, WikiResponse } from './ng-wiki.interfaces';
 })
 
 export class WikiClientService {
-  limit:number=8;
+  limit:number=12;
   languge_code:string = 'en';
 
   /*****  https://www.mediawiki.org/wiki/API:REST_API/Reference#JavaScript ******/
-  //baseUrl: string = 'https://'+ this.languge_code + '.wikipedia.org/w/rest.php/v1/search/page';
-  
-  //query: string = decodeURIComponent('test');
   results: WikiPage[] = [];
 
   constructor(private httpClient: HttpClient) {

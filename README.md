@@ -1,13 +1,43 @@
 # NgWiki
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+### Welcome to the next day of the first week of our life!
 
-## Build ng-wiki-service
+Service provider built for Wikipedia/Angular developers. using free and anonymously Wikipedia REST API service, Enjoy
+
+## Build your local `dist/` directory
 
 Run `ng build ng-wiki-service` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Development server
+## Highlights
+### 1. Request wiki page by titie
+```
+var title = 'Jupiter';
+var client = new WikiClientService(this.httpClient)
+      .getPageOffline(title)
+      .then(page => {
+          console.info('Bind the page to you dom',page);
+        //someInnerHTML = page.html;
+      })
+      .catch(error => console.error(error));
+```
 
-Run `ng serve ng-wiki-example` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### 2. Search wiki pages by query
+```
+var query = 'Jupiter';
+var subscription = new WikiClientService(this.httpClient)
+      .setLanguageCode('en')
+      .list(query)
+      .then((response) => {
+        response.pages.forEach(page => {
+            console.info('Bind the page to you dom',page);
+        });
+      }).catch(error => console.error(error));
+```
 
-![localhost_4200_list_help](https://user-images.githubusercontent.com/12012140/157838060-fee63f9b-cbd0-4529-a694-63b819c543f4.png)
+## Quick Start
+
+ * ### [Wiki page outlet example](projects/example-page/README.md) step by step example.
+
+ * ### [List with Material Example](projects/example-list-material/README.md) step by step example.
+
+ * ### [Hello World](projects/ng-wiki-service/HelloWorld.md) step by step example, create your first wikipedia page router outlet
