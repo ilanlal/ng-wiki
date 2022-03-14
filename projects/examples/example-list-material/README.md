@@ -1,7 +1,6 @@
 # NgWiki - search for wikipedia pages example
 
 ## Run this example now
-###### [Hello World Step by Step](/projects/ng-wiki-service/HelloWorld.md)
 
 1. Run `ng build ng-wiki-service` to build the project. The build artifacts will be stored in the `dist/` directory.
 
