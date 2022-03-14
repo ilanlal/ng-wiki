@@ -1,13 +1,10 @@
-# NgWiki
-Service provider built for Wikipedia/Angular developers. using free and anonymously Wikipedia REST API service
+## NgWiki - Basics
 
-## NgWiki - Basic
- 
-### 1. Add NgWiki package to your project
+### 1. Install NgWiki package
 
-  * Run `npm link ng-wiki`
+  * Run `npm i ng-wiki`
 
-### 2. Import the HttpClientModule in your code
+### 2. Import the HttpClientModule 
 
 Add HttpClientModule to imports array within your NgModule (usually located at "`src/app/app.module.ts`")
 
@@ -20,11 +17,7 @@ Add HttpClientModule to imports array within your NgModule (usually located at "
 })
 ```
 
-### 3. Use in your component code
-
-
-#### Get specified ('Jupiter') Wikipedia page content
-
+### 3. Use in your component
 ```
 import { Component, OnInit } from '@angular/core';
 import { WikiClientService } from 'ng-wiki';
@@ -53,4 +46,11 @@ export class AppComponent implements OnInit {
       .catch(err => console.error(err));
   }
 }
+
 ```
+
+
+
+
+
+

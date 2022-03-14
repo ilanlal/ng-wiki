@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { WikiClientService, WikiPage } from 'ng-wiki-service';
+import { WikiClientService, WikiPage } from 'dist/ng-wiki-service';
 import { Subscription } from 'rxjs';
 
 const DEFAULT_QUERY = 'Main_Page';
@@ -30,7 +30,7 @@ export class WikiSearchListComponent implements OnInit {
     this.pages = [];
     this.subs = new WikiClientService(this.httpClient)
       .setLanguageCode(this.selectedLang)
-      .list(this.query || DEFAULT_QUERY)
+      .list(this.query || DEFAULT_QUERY,10)
       .then((response) => {
         console.log(response);
 

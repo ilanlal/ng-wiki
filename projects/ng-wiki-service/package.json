@@ -1,10 +1,19 @@
 {
-  "name": "ng-wiki-service",
-  "version": "0.0.2",
+  "author":"Ilan Laloum",
+  "license":"MIT",
+  "name": "ng-wiki",
+  "version": "1.0.0",
+  "description":"service provider built for Wikipedia/Angular developers. using free and anonymously Wikipedia REST API service",
+  "keywords":["Wikipedia","Angular","API"],
+  "repository": {
+    "type":"git",
+    "url":"git+https://github.com/ilanlal/ng-wiki.git"
+  },
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
   },
+  
   "dependencies": {
     "tslib": "^2.3.0"
   }

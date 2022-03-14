@@ -1,34 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { WikiPage, WikiResponse } from './ng-wiki.interfaces';
+import { NgWikiInterface, WikiPage, WikiResponse } from './ng-wiki.interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class WikiClientService {
-  limit:number=12;
+/*****  https://www.mediawiki.org/wiki/API:REST_API/Reference#JavaScript ******/
+export class WikiClientService implements NgWikiInterface {
   languge_code:string = 'en';
-
-  /*****  https://www.mediawiki.org/wiki/API:REST_API/Reference#JavaScript ******/
-  results: WikiPage[] = [];
-
-  constructor(private httpClient: HttpClient) {
+  
+  constructor(private httpClient: HttpClient) { 
   }
 
   setLanguageCode(code:string) {
     this.languge_code = code;
     return this;
   }
-  setLimit(limit:number) {
-    this.limit = limit;
-    return this;
-  }
 
-  async list(slug:string) {
+  async list(slug:string, limit:number) {
     const promise = new Promise<WikiResponse>((resolve, reject) => {
       try {
-        let url = 'https://'+ this.languge_code + '.wikipedia.org/w/rest.php/v1/search/page?limit=' + encodeURIComponent(this.limit) + '&q=' + encodeURIComponent(slug);
+        let url = 'https://'+ this.languge_code + '.wikipedia.org/w/rest.php/v1/search/page?limit=' + encodeURIComponent(limit) + '&q=' + encodeURIComponent(slug);
 
         console.info('send request', url);
         this.httpClient
@@ -49,9 +42,11 @@ export class WikiClientService {
     const promise = new Promise<WikiPage>((resolve, reject) => {
       try {
         let url = 'https://'+ this.languge_code + '.wikipedia.org/w/rest.php/v1/page/' + encodeURIComponent(title);
+        
         this.httpClient
           .get<WikiPage>(url)
           .subscribe((response:WikiPage) => {
+            console.info(url,response);
             resolve(response);
           });
       } catch (error) {

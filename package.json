@@ -1,6 +1,13 @@
 {
-  "name": "ng-wiki",
-  "version": "0.1.0",
+  "author":"Ilan Laloum",
+  "license":"MIT",
+  "name": "ng-wiki-project",
+  "version": "1.0.0",
+  "repository": {
+    "type":"git",
+    "url":"git+https://github.com/ilanlal/ng-wiki.git"
+  },
+  "homepage": "git+https://github.com/ilanlal/ng-wiki#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,7 +30,8 @@
     "@angular/router": "~13.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "ng-wiki":"1.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",

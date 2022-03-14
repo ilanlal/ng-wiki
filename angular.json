@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "projects/examples",
   "projects": {
     "ng-wiki-service": {
       "projectType": "library",
@@ -41,25 +41,25 @@
           "strict": true
         }
       },
-      "root": "projects/example-list-material",
-      "sourceRoot": "projects/example-list-material/src",
+      "root": "projects/examples/example-list-material",
+      "sourceRoot": "projects/examples/example-list-material/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/example-list-material",
-            "index": "projects/example-list-material/src/index.html",
-            "main": "projects/example-list-material/src/main.ts",
-            "polyfills": "projects/example-list-material/src/polyfills.ts",
-            "tsConfig": "projects/example-list-material/tsconfig.app.json",
+            "index": "projects/examples/example-list-material/src/index.html",
+            "main": "projects/examples/example-list-material/src/main.ts",
+            "polyfills": "projects/examples/example-list-material/src/polyfills.ts",
+            "tsConfig": "projects/examples/example-list-material/tsconfig.app.json",
             "assets": [
-              "projects/example-list-material/src/favicon.ico",
-              "projects/example-list-material/src/assets"
+              "projects/examples/example-list-material/src/favicon.ico",
+              "projects/examples/example-list-material/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "projects/example-list-material/src/styles.css"
+              "projects/examples/example-list-material/src/styles.css"
             ],
             "scripts": []
           },
@@ -79,8 +79,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/example-list-material/src/environments/environment.ts",
-                  "with": "projects/example-list-material/src/environments/environment.prod.ts"
+                  "replace": "projects/examples/example-list-material/src/environments/environment.ts",
+                  "with": "projects/examples/example-list-material/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -117,17 +117,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/example-list-material/src/test.ts",
-            "polyfills": "projects/example-list-material/src/polyfills.ts",
-            "tsConfig": "projects/example-list-material/tsconfig.spec.json",
-            "karmaConfig": "projects/example-list-material/karma.conf.js",
+            "main": "projects/examples/example-list-material/src/test.ts",
+            "polyfills": "projects/examples/example-list-material/src/polyfills.ts",
+            "tsConfig": "projects/examples/example-list-material/tsconfig.spec.json",
+            "karmaConfig": "projects/examples/example-list-material/karma.conf.js",
             "assets": [
-              "projects/example-list-material/src/favicon.ico",
-              "projects/example-list-material/src/assets"
+              "projects/examples/example-list-material/src/favicon.ico",
+              "projects/examples/example-list-material/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "projects/example-list-material/src/styles.css"
+              "projects/examples/example-list-material/src/styles.css"
             ],
             "scripts": []
           }
@@ -141,24 +141,24 @@
           "strict": true
         }
       },
-      "root": "projects/example-page",
-      "sourceRoot": "projects/example-page/src",
+      "root": "projects/examples/example-page",
+      "sourceRoot": "projects/examples/example-page/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/example-page",
-            "index": "projects/example-page/src/index.html",
-            "main": "projects/example-page/src/main.ts",
-            "polyfills": "projects/example-page/src/polyfills.ts",
-            "tsConfig": "projects/example-page/tsconfig.app.json",
+            "index": "projects/examples/example-page/src/index.html",
+            "main": "projects/examples/example-page/src/main.ts",
+            "polyfills": "projects/examples/example-page/src/polyfills.ts",
+            "tsConfig": "projects/examples/example-page/tsconfig.app.json",
             "assets": [
-              "projects/example-page/src/favicon.ico",
-              "projects/example-page/src/assets"
+              "projects/examples/example-page/src/favicon.ico",
+              "projects/examples/example-page/src/assets"
             ],
             "styles": [
-              "projects/example-page/src/styles.css"
+              "projects/examples/example-page/src/styles.css"
             ],
             "scripts": []
           },
@@ -178,8 +178,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/example-page/src/environments/environment.ts",
-                  "with": "projects/example-page/src/environments/environment.prod.ts"
+                  "replace": "projects/examples/example-page/src/environments/environment.ts",
+                  "with": "projects/examples/example-page/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -216,16 +216,114 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/example-page/src/test.ts",
-            "polyfills": "projects/example-page/src/polyfills.ts",
-            "tsConfig": "projects/example-page/tsconfig.spec.json",
-            "karmaConfig": "projects/example-page/karma.conf.js",
+            "main": "projects/examples/example-page/src/test.ts",
+            "polyfills": "projects/examples/example-page/src/polyfills.ts",
+            "tsConfig": "projects/examples/example-page/tsconfig.spec.json",
+            "karmaConfig": "projects/examples/example-page/karma.conf.js",
             "assets": [
-              "projects/example-page/src/favicon.ico",
-              "projects/example-page/src/assets"
+              "projects/examples/example-page/src/favicon.ico",
+              "projects/examples/example-page/src/assets"
             ],
             "styles": [
-              "projects/example-page/src/styles.css"
+              "projects/examples/example-page/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "example-basics": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/examples/example-basics",
+      "sourceRoot": "projects/examples/example-basics/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/example-basics",
+            "index": "projects/examples/example-basics/src/index.html",
+            "main": "projects/examples/example-basics/src/main.ts",
+            "polyfills": "projects/examples/example-basics/src/polyfills.ts",
+            "tsConfig": "projects/examples/example-basics/tsconfig.app.json",
+            "assets": [
+              "projects/examples/example-basics/src/favicon.ico",
+              "projects/examples/example-basics/src/assets"
+            ],
+            "styles": [
+              "projects/examples/example-basics/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/examples/example-basics/src/environments/environment.ts",
+                  "with": "projects/examples/example-basics/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "example-basics:build:production"
+            },
+            "development": {
+              "browserTarget": "example-basics:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "example-basics:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/examples/example-basics/src/test.ts",
+            "polyfills": "projects/examples/example-basics/src/polyfills.ts",
+            "tsConfig": "projects/examples/example-basics/tsconfig.spec.json",
+            "karmaConfig": "projects/examples/example-basics/karma.conf.js",
+            "assets": [
+              "projects/examples/example-basics/src/favicon.ico",
+              "projects/examples/example-basics/src/assets"
+            ],
+            "styles": [
+              "projects/examples/example-basics/src/styles.css"
             ],
             "scripts": []
           }
@@ -233,5 +331,5 @@
       }
     }
   },
-  "defaultProject": "ng-wiki-example"
+  "defaultProject": "ng-wiki-service"
 }

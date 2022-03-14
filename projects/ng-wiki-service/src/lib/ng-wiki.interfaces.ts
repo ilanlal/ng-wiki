@@ -1,3 +1,8 @@
+export interface NgWikiInterface {
+    languge_code:string;
+    setLanguageCode(code:string):NgWikiInterface;
+    list(slug:string,limit:number):Promise<WikiResponse>;
+}
 
 export interface WikiResponse {
     pages:WikiPage[];
