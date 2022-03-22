@@ -44,12 +44,12 @@ export class AppComponent implements OnInit {
   id: number = -1;
   content: string = '<p>loding</p>';
   
-  constructor(private wikiClient: WikiClientService) {
+  constructor(public wikiClient: WikiClientService) {
   }
 
   ngOnInit(): void {
     this.wikiClient
-      .getPageOffline('"Hello,_World!"_program')
+      .fetchPageOffline('"Hello,_World!"_program')
       .then(page => {
         this.title = page?.title || 'Error';
         this.id = page.id;
