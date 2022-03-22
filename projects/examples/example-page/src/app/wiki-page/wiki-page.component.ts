@@ -12,7 +12,7 @@ const DEFAULT_TITLE = 'home';
 })
 export class WikiPageComponent implements OnInit {
   @ViewChild('content') content:ElementRef;
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private nativeRef:ElementRef) {
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private nativeRef:WikiClientService,public wikiClient:WikiClientService) {
     this.content = new ElementRef(nativeRef);
   }
 
@@ -24,9 +24,9 @@ export class WikiPageComponent implements OnInit {
 
   async loadPage(title: string | null) {
     console.info('loadPage',title);
-    var client = new WikiClientService(this.httpClient);
-    client
-      .getPageOffline(title || DEFAULT_TITLE)
+   
+    this.wikiClient
+      .fetchPageOffline(title || DEFAULT_TITLE)
       .then(page => {
         this.content.nativeElement.innerHTML = page.html || '<p>response: page.html is empty</p>';
       })

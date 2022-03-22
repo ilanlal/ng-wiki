@@ -5,7 +5,8 @@ import { WikiPageComponent } from './wiki-page/wiki-page.component';
 const routes: Routes = [
   { path: '', component: WikiPageComponent, pathMatch: 'full'},
   { path: 'page',component: WikiPageComponent},
-  { path: 'page/:title',component: WikiPageComponent}
+  { path: 'page/:title',component: WikiPageComponent},
+  { path: '**' ,redirectTo: 'page/help'}
 ];
 
 @NgModule({

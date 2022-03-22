@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { WikiClientServiceSample } from 'ng-wiki';
+import { WikiClientService } from 'ng-wiki';
 
 import { AppComponent } from './app.component';
 
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [WikiClientServiceSample],
+  providers: [WikiClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

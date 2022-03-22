@@ -19,7 +19,7 @@ export class WikiClientService implements NgWikiInterface {
     return this;
   }
 
-  async list(slug:string, limit:number) {
+  async fetchPageList(slug:string, limit:number) {
     const promise = new Promise<WikiResponse>((resolve, reject) => {
       try {
         let url = 'https://'+ this.languge_code + '.wikipedia.org/w/rest.php/v1/search/page?limit=' + encodeURIComponent(limit) + '&q=' + encodeURIComponent(slug);
@@ -39,7 +39,7 @@ export class WikiClientService implements NgWikiInterface {
     return promise;
   }
 
-  async getPageSource(title:string) {
+  async fetchPageSource(title:string) {
     const promise = new Promise<WikiPage>((resolve, reject) => {
       try {
         let url = 'https://'+ this.languge_code + '.wikipedia.org/w/rest.php/v1/page/' + encodeURIComponent(title);
@@ -59,7 +59,7 @@ export class WikiClientService implements NgWikiInterface {
     return promise;
   }
 
-  async getPageBare(title:string) {
+  async fetchPageBare(title:string) {
     const promise = new Promise<WikiPage>((resolve, reject) => {
       try {
         //Returns the standard page object for a wiki page, including the API route to fetch the latest content in HTML, the license, and information about the latest revision.
@@ -79,7 +79,7 @@ export class WikiClientService implements NgWikiInterface {
     return promise;
   }
 
-  async getPageOffline(title:string) {
+  async fetchPageOffline(title:string) {
     const promise = new Promise<WikiPage>((resolve, reject) => {
       try {
         //Returns the standard page object for a wiki page, including the API route to fetch the latest content in HTML, the license, and information about the latest revision.
