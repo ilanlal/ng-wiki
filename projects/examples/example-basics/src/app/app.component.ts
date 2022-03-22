@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { WikiClientService } from 'ng-wiki'
 
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
      this.wikiClient
-       .getPageOffline('Jupiter')
+       .fetchPageOffline('Jupiter')
        .then(page => {
          this.title = page?.title || 'Error';
          this.id = page.id;

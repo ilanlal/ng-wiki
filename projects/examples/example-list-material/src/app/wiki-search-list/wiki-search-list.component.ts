@@ -29,7 +29,7 @@ export class WikiSearchListComponent implements OnInit {
     this.pages = [];
     this.wikiClient
       .setLanguageCode(this.selectedLang)
-      .list(this.query || DEFAULT_QUERY,10)
+      .fetchPageList(this.query || DEFAULT_QUERY,10)
       .then((response) => {
         console.log(response);
 

@@ -26,7 +26,7 @@ export class WikiPageComponent implements OnInit {
     console.info('loadPage',title);
    
     this.wikiClient
-      .getPageOffline(title || DEFAULT_TITLE)
+      .fetchPageOffline(title || DEFAULT_TITLE)
       .then(page => {
         this.content.nativeElement.innerHTML = page.html || '<p>response: page.html is empty</p>';
       })
