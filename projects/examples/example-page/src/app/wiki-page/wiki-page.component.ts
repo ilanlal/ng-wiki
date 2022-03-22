@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { WikiClientService } from 'ng-wiki-service';
+import { WikiClientService } from 'ng-wiki';
 import { ActivatedRoute } from '@angular/router';
 
 const DEFAULT_TITLE = 'home';

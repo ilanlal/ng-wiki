@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NgWikiInterface, WikiPage, WikiResponse } from './ng-wiki.interfaces';
+import { NgWikiInterface, WikiResponse } from './ng-wiki.interfaces';
+import { WikiPage } from './ng-wiki.model';
 
 @Injectable({
   providedIn: 'root'

@@ -2,7 +2,7 @@
   "author":"Ilan Laloum",
   "license":"MIT",
   "name": "ng-wiki",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description":"service provider built for Wikipedia/Angular developers. using free and anonymously Wikipedia REST API service",
   "keywords":["Wikipedia","Angular","API"],
   "repository": {

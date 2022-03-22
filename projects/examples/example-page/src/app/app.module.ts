@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { WikiClientService } from 'ng-wiki-service';
+import { WikiClientService } from 'ng-wiki';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

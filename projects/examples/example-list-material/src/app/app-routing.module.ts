@@ -4,7 +4,7 @@ import { WikiSearchListComponent } from './wiki-search-list/wiki-search-list.com
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/list/', pathMatch: 'full'},
+  {path: '', redirectTo: '/list', pathMatch: 'full'},
   {
     path: 'list/:query',
     component: WikiSearchListComponent
@@ -12,6 +12,9 @@ const routes: Routes = [
   {
     path: 'list',
     component: WikiSearchListComponent
+  },
+  {
+    path:'**', redirectTo: '/list/help'
   }
 ];
 

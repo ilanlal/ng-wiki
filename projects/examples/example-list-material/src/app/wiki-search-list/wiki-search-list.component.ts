@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { WikiClientService, WikiPage } from 'dist/ng-wiki-service';
+import { WikiClientService, WikiPage } from 'ng-wiki';
 import { Subscription } from 'rxjs';
 
 const DEFAULT_QUERY = 'Main_Page';

@@ -5,11 +5,11 @@ export interface NgWikiInterface {
 }
 
 export interface WikiResponse {
-    pages:WikiPage[];
+    pages:WikiPageInterface[];
 }
 
 
-export interface WikiPage {
+export interface WikiPageInterface {
     id:number;
     key:string;
     excerpt?:string;
