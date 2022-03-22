@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { WikiClientService, WikiPage } from 'ng-wiki';
 import { Subscription } from 'rxjs';
@@ -18,7 +17,7 @@ export class WikiSearchListComponent implements OnInit {
   pages: WikiPage[] = [];
   langs: string[] = ['en','fr','es','de','ru'];
   selectedLang = 'en';
-  constructor(private httpClient: HttpClient) {
+  constructor(public wikiClient:WikiClientService) {
 
   }
 
@@ -28,7 +27,7 @@ export class WikiSearchListComponent implements OnInit {
 
   async search() {
     this.pages = [];
-    this.subs = new WikiClientService(this.httpClient)
+    this.wikiClient
       .setLanguageCode(this.selectedLang)
       .list(this.query || DEFAULT_QUERY,10)
       .then((response) => {

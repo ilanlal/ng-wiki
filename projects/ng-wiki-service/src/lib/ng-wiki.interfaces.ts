@@ -1,7 +1,12 @@
+
 export interface NgWikiInterface {
     languge_code:string;
     setLanguageCode(code:string):NgWikiInterface;
-    list(slug:string,limit:number):Promise<WikiResponse>;
+    fetchPageSource(title: string):Promise<WikiPageInterface>;
+    fetchPageBare(title: string):Promise<WikiPageInterface>;
+    fetchPageOffline(title: string):Promise<WikiPageInterface>;
+    fetchPageList(slug:string,limit:number):Promise<WikiResponse>;
+    
 }
 
 export interface WikiResponse {
