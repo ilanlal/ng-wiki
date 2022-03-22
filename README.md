@@ -44,12 +44,12 @@ export class AppComponent implements OnInit {
   id: number = -1;
   content: string = '<p>loding</p>';
   constructor(public wikiClient: WikiClientService) {
-    console.log('%c Hi...','color:green')
+    
   }
 
   ngOnInit(): void {
      this.wikiClient
-       .getPageOffline('Jupiter')
+       .fetchPageOffline('Jupiter')
        .then(page => {
          this.title = page?.title || 'Error';
          this.id = page.id;
@@ -98,7 +98,7 @@ div.sample {
 
 ## RUN
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
 
 
