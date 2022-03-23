@@ -12,6 +12,7 @@ export class WikiClientService implements NgWikiInterface {
   languge_code:string = 'en';
   
   constructor(private httpClient: HttpClient) { 
+    console.log('%c Hi from WikiClientService', 'color:white, backgrouncolor:green');
   }
 
   setLanguageCode(code:string) {
