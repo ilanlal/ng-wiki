@@ -1,4 +1,10 @@
-# NgWiki - Quic Start
+# NgWiki - Quick Start
+
+### My first goal in this project is to complete the full life cycle, of an [Open-source software (OSS)](https://en.wikipedia.org/wiki/Open-source_software)
+
+1. Create new branch
+2. Commit 
+3. Merge & pull request
 
 Service provider built for Wikipedia/Angular developers. using free and anonymously Wikipedia REST API service
 
@@ -66,11 +72,6 @@ export class AppComponent implements OnInit {
 <div class="sample">
     <ul>
         <title>EDU</title>
-        <li> <a href="https://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a> was an American theoretical
-            physicist, known for his work in the path integral formulation of quantum mechanics, the theory of quantum
-            electrodynamics, the physics of the superfluidity of supercooled liquid helium</li>
-            <li> <a href="https://en.wikipedia.org/wiki/N._David_Mermin">David Mermin</a>  If I were forced to sum up in one sentence what the Copenhagen interpretation says
-                to me, it would be “Shut up and calculate!”</li>
     </ul>
 
     <hr />
