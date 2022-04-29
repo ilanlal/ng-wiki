@@ -16,7 +16,7 @@ Service provider built for Wikipedia/Angular developers. using free and anonymou
 
 Add HttpClientModule to imports array within your NgModule (usually located at "`src/app/app.module.ts`")
 
-```
+```typescript
 @NgModule({
   imports: [
     ...
@@ -30,7 +30,7 @@ Add HttpClientModule to imports array within your NgModule (usually located at "
 
 #### Get specified ('Jupiter') Wikipedia page content
 
-```
+```typescript
 import { Component, OnInit } from '@angular/core';
 import { WikiClientService } from 'ng-wiki';
 

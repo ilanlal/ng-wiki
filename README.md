@@ -23,7 +23,7 @@ Run `ng g c wiki-page` to generate a new angular component. The component will b
 
 + Add HttpClientModule to imports array within your NgModule (usually located at "`src/app/app.module.ts`")
 + Add WikiClientService to the providers array within your NgModule (usually located at "`src/app/app.module.ts`"
-```
+```typescript
 @NgModule({
   imports: [
     ...
@@ -35,7 +35,7 @@ Run `ng g c wiki-page` to generate a new angular component. The component will b
 
 #### Copy this code to `src/app/wiki-page.component.ts`
 
-```
+```typescript
 import { Component, OnInit } from '@angular/core';
 import { WikiClientService } from 'ng-wiki'
 
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
 
 #### Copy this code to `src/app/wiki-page.component.html`
 
-```
+```html
 <div class="sample">
     <ul>
         <title>EDU</title>
@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
 
 #### Copy this code to `src/app/wiki-page.component.css`
 
-```
+```css
 
 div.sample {
     background-color: #fba;

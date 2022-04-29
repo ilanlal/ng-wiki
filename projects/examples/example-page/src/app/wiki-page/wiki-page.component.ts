@@ -14,6 +14,7 @@ export class WikiPageComponent implements OnInit {
   @ViewChild('content') content:ElementRef;
   constructor(private route: ActivatedRoute, private httpClient: HttpClient, private nativeRef:WikiClientService,public wikiClient:WikiClientService) {
     this.content = new ElementRef(nativeRef);
+    
   }
 
   async ngOnInit() {
